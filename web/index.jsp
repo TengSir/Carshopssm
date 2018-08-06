@@ -14,7 +14,7 @@
 <body>
 nav
 <hr>
-<a href="/login.jsp">login</a>
+<a href="/login.jsp">login</a>&nbsp;<a href="/register.jsp">register</a>&nbsp;
 <hr style="color:red">
 <c:if test="${not empty user}">
 welcome ${user.username}!

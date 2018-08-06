@@ -1,14 +1,25 @@
 package com.oracle.carshop.model.dao;
 
 import org.apache.ibatis.session.SqlSession;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
+import org.springframework.stereotype.Component;
 
-public class BaseDAO {
-    private SqlSession  session;
-    public BaseDAO(){
-        session=SessionFactoryHelper.getSf().openSession();
+import javax.annotation.Resource;
+
+@Component
+public class BaseDAO   extends SqlSessionDaoSupport{
+
+    private SqlSession  sqlSession;
+
+    public SqlSession getSqlSession() {
+        return sqlSession;
     }
 
-    public SqlSession getSession() {
-        return session;
+    public void setSqlSession(SqlSession sqlSession) {
+        this.sqlSession = sqlSession;
     }
+
+
+
 }

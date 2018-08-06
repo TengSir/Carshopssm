@@ -19,13 +19,28 @@ public class UserControll {
         this.userSerice = userSerice;
     }
 
-    @RequestMapping("/login")    //http://domanin/user/login
+    @RequestMapping("/login")
     public String  processLogin(@ModelAttribute("user") User  user){
         System.out.println(user);
         User u=userSerice.processLogin(user);
         if(u==null)
         {
             return "login";
+        }else
+        {
+            return "index";
+        }
+
+    }
+
+    @RequestMapping("/register")
+    public String  register(@ModelAttribute("user") User  user){
+        System.out.println("register user");
+        System.out.println(user);
+        boolean result=userSerice.regiserUser(user);
+        if(!result)
+        {
+            return "register";
         }else
         {
             return "index";

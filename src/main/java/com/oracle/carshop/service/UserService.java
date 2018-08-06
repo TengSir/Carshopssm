@@ -6,4 +6,5 @@ import org.springframework.stereotype.Component;
 
 public interface UserService {
     public User  processLogin(User user);
+    public boolean regiserUser(User user);
 }

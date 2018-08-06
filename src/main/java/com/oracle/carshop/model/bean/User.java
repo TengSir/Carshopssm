@@ -5,13 +5,34 @@ public class User {
     private String username;
     private String password;
 
+    private String sex;
+    private int age;
+
     @Override
     public String toString() {
         return "User{" +
                 "userid=" + userid +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", sex='" + sex + '\'' +
+                ", age=" + age +
                 '}';
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public int getUserid() {

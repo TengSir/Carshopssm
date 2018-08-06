@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Carshop(SSM)" />
+        <module name="SSM2018" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Carshop(SSM)" target="1.5" />
+      <module name="SSM2018" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

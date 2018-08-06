@@ -23,4 +23,8 @@ public class UserServiceImp implements UserService {
         User u= userDAO.getInfoByUAndP(user.getUsername(),user.getPassword());
         return u;
     }
+
+    public boolean regiserUser(User user) {
+        return userDAO.registerUser(user);
+    }
 }
